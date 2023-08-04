@@ -1,21 +1,22 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { UserModel } from "../Models/user";
+import { UserModel } from "../Models/user.js";
 
 // REGISTERING THE USER
 
-const registerUser = async (req, res) => {
+export const registerUser = async (req, res) => {
   try {
     const {
       firstName,
       lastName,
-      password,
-      picturePath,
-      friends,
       location,
       occupation,
+      picturePath,
+      email,
+      password,
       viewedProfile,
       impressions,
+      friends,
     } = req.body;
 
     const salt = await bcrypt.genSalt();
@@ -24,17 +25,18 @@ const registerUser = async (req, res) => {
     const newUser = await UserModel.create({
       firstName,
       lastName,
-      hashPassword,
-      picturePath,
-      friends,
       location,
       occupation,
+      picturePath,
+      email,
+      password: hashPassword,
       viewedProfile: Math.floor(Math.random() * 10000),
       impressions: Math.floor(Math.random() * 10000),
+      friends,
     });
     res.status(201).json(newUser);
   } catch (error) {
-    console.lo("Error  ", error);
+    console.log("Error  ", error);
     res.status(500).json({ error: error.message });
   }
 };

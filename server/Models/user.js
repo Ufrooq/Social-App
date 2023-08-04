@@ -8,13 +8,19 @@ const UserSchema = new mongoose.Schema(
       min: 2,
       max: 20,
     },
-    firstName: {
+    lastName: {
       type: String,
       required: true,
       min: 2,
       max: 20,
     },
-    lastName: {
+    location: String,
+    occupation: String,
+    picturePath: {
+      type: String,
+      default: "",
+    },
+    email: {
       type: String,
       required: true,
       max: 20,
@@ -25,16 +31,10 @@ const UserSchema = new mongoose.Schema(
       required: true,
       min: 20,
     },
-    picturePath: {
-      type: String,
-      default: "",
-    },
     friends: {
       type: Array,
       default: [],
     },
-    location: String,
-    occupation: String,
     viewedProfile: Number,
     impressions: Number,
   },
