@@ -32,7 +32,6 @@ const registerUser = async (req, res) => {
       viewedProfile: Math.floor(Math.random() * 10000),
       impressions: Math.floor(Math.random() * 10000),
     });
-
     res.status(201).json(newUser);
   } catch (error) {
     console.lo("Error  ", error);
