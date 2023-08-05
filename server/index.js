@@ -10,6 +10,12 @@ import morgan from "morgan";
 import path from "path";
 import { fileURLToPath } from "url";
 import { registerUser } from "./Controllers/auth.js";
+import { Connection } from "./Connection/dbConnectioin.js";
+import authRoutes from "./Routes/authRoutes.js";
+import userRoutes from "./Routes/userRoutes.js";
+import postRouters from "./Routes/postRouters.js";
+
+import { validatetoken } from "./Middleware/validateToken.js";
 
 // CONFIGURATIONS --->
 const __filename = fileURLToPath(import.meta.url);
@@ -26,6 +32,9 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
+// MongoDB Connection --->
+Connection();
+
 // FILE STORAGE SYSTEM --->
 const storage = multer.diskStorage({
   destination: (req, res, cb) => {
@@ -37,20 +46,15 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-/* ROUTES WITH FILES */
-app.post("/auth/register", registerUser);
+/* ROUTES FOR FILES */
+app.post("/auth/register", upload.single("picture"), registerUser);
 
-// MongoDB Connection --->
+/* ROUTES FOR AUTHORIZATION */
+app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
+
+/* MAKING SERVER LIVE*/
 const port = process.env.PORT || 6001;
-const connectionFunction = async () => {
-  try {
-    const data = await mongoose.connect(process.env.DB_URL);
-    console.log("----> Connection Successfully Established with db <----");
-  } catch (error) {
-    console.log(error);
-  }
-};
-connectionFunction();
 app.listen(port, () => {
   console.log(`http://localhost:${port}`);
 });
