@@ -30,6 +30,7 @@ export const getUserFriends = async (req, res) => {
   }
 };
 
+// UPDATE FRIEND --->
 export const addRemoveFriend = async (req, res) => {
   try {
     const { id, friendId } = req.params;

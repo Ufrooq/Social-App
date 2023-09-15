@@ -13,7 +13,7 @@ import { registerUser } from "./Controllers/auth.js";
 import { Connection } from "./Connection/dbConnectioin.js";
 import authRoutes from "./Routes/authRoutes.js";
 import userRoutes from "./Routes/userRoutes.js";
-import postRouters from "./Routes/postRouters.js";
+import postRoutes from "./Routes/postRouters.js";
 
 import { validatetoken } from "./Middleware/validateToken.js";
 
@@ -52,6 +52,7 @@ app.post("/auth/register", upload.single("picture"), registerUser);
 /* ROUTES FOR AUTHORIZATION */
 app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
+app.use("/posts", postRoutes);
 
 /* MAKING SERVER LIVE*/
 const port = process.env.PORT || 6001;
