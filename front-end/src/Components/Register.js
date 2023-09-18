@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./styles/register.scss";
 
 const Register = () => {
   const [userData, setUserData] = useState({
@@ -56,7 +57,7 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <section className="user_registration">
       <form onSubmit={postData} method="POST">
         <input
           name="firstName"
@@ -128,7 +129,7 @@ const Register = () => {
 
         <button type="submit">submit</button>
       </form>
-    </div>
+    </section>
   );
 };
 

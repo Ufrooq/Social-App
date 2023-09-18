@@ -1,4 +1,3 @@
-import "./App.css";
 import Register from "./Components/Register";
 import "./App.scss";
 
