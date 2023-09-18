@@ -1,5 +1,5 @@
-import { postsModel } from "../Models/posts";
-import { UserModel } from "../Models/user";
+import { postsModel } from "../Models/posts.js";
+import { UserModel } from "../Models/user.js";
 
 export const createPost = async (req, res) => {
   try {
