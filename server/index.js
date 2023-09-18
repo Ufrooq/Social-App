@@ -14,6 +14,7 @@ import { Connection } from "./Connection/dbConnectioin.js";
 import authRoutes from "./Routes/authRoutes.js";
 import userRoutes from "./Routes/userRoutes.js";
 import postRoutes from "./Routes/postRouters.js";
+import cookieParser from "cookie-parser";
 
 import { validatetoken } from "./Middleware/validateToken.js";
 
@@ -23,6 +24,7 @@ const __dirname = path.dirname(__filename);
 
 dotenv.config();
 const app = express();
+app.use(cookieParser());
 app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
