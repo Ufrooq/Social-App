@@ -5,11 +5,9 @@
 }
 nav {
   background-color: #212121;
-  width: 90%;
+  width: 100%;
   @include custom_flex();
-  padding: 15px 30px;
-  border-radius: 5px;
-  margin-top: 20px;
+  padding: 20px 30px;
   .left-part {
     @include custom_flex();
     column-gap: 20px;

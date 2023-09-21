@@ -1,13 +1,12 @@
 import React from "react";
 import Profile from "../Components/Profile";
-import Navbar from "../Components/NavBar";
+import "./styles/style.scss";
 
 const Home = () => {
   return (
-    <>
+    <div className="home-page">
       <Profile />
-      {/* <Navbar /> */}
-    </>
+    </div>
   );
 };
 
