@@ -15,7 +15,7 @@ const Profile = () => {
         </div>
         <i class="fa-solid fa-user-plus"></i>
       </div>
-      <hr />
+      <div className="line" />
       <div className="address">
         <div className="location">
           <i class="fa-solid fa-location-dot"></i>
@@ -26,21 +26,24 @@ const Profile = () => {
           <span>Capital Technologies,E-11,Islamabad</span>
         </div>
       </div>
-      <hr />
+      <div className="line" />
       <div className="views">
         <div className="viewers">
           <p>Who views your profile </p>
           <span>3434</span>
         </div>
-        <div className="impression">Impressions of your posts</div>
-        <span>563476</span>
+        <div className="impression">
+          <p>Impressions of your posts</p>
+          <span>563476</span>
+        </div>
       </div>
-      <hr />
+      <div className="line" />
       <div className="socials">
+        <span id="sos">Social Profiles</span>
         <div className="link">
           <div className="profile">
             <i class="fa-solid fa-hashtag"></i>
-            <div>
+            <div className="details">
               <p>Twitter</p>
               <span>Socail Network</span>
             </div>
@@ -50,7 +53,7 @@ const Profile = () => {
         <div className="link">
           <div className="profile">
             <i class="fa-brands fa-linkedin"></i>
-            <div>
+            <div className="details">
               <p>Linkdin</p>
               <span>Network Platform</span>
             </div>

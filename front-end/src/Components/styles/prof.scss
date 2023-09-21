@@ -1,13 +1,19 @@
 .card {
+  .line {
+    height: 0.8px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.373);
+  }
   width: 350px;
   height: auto;
-  background-color: white;
+  background-color: #212121;
   padding: 25px;
   border-radius: 10px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 20px;
+  color: #fff;
   .header {
     display: flex;
     align-items: center;
@@ -28,7 +34,90 @@
         }
         span {
           font-size: 0.8rem;
+          color: #ffffffab;
         }
+      }
+    }
+    i {
+      font-size: 1.3rem;
+    }
+  }
+
+  .address {
+    .location {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      i {
+        font-size: 1.5rem;
+        width: 20px;
+      }
+      span {
+        font-size: 0.8rem;
+        color: #ffffffab;
+      }
+    }
+    .organization {
+      @extend .location;
+      margin-top: 10px;
+      i {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .views {
+    .viewers {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        font-size: 0.8rem;
+        color: #ffffffab;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+    .impression {
+      @extend .viewers;
+    }
+  }
+
+  .socials {
+    #sos {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+    .link {
+      margin-top: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .profile {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        i {
+          font-size: 2rem;
+          color: #ffffffab;
+        }
+        .details {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          p {
+            font-weight: bold;
+            font-size: 0.9rem;
+          }
+          span {
+            font-size: 0.7rem;
+            color: #ffffffab;
+          }
+        }
+      }
+      i {
+        font-size: 1.2rem;
+        color: #ffffffab;
       }
     }
   }
