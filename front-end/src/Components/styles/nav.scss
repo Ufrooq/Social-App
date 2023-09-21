@@ -1,0 +1,28 @@
+@mixin custom_flex() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  width: 80%;
+  @include custom_flex();
+  padding: 20px;
+  .left-part {
+    display: flex;
+    @include custom_flex();
+
+    .input-box {
+      @include custom_flex();
+    }
+  }
+  .right-part {
+    display: flex;
+    @include custom_flex();
+    .links {
+      display: flex;
+      li {
+        list-style-type: none;
+      }
+    }
+  }
+}
