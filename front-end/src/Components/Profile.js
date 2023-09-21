@@ -8,7 +8,7 @@ const Profile = () => {
       <div className="header">
         <div className="profile">
           <img src={profile_image} alt="" srcset="" />
-          <div>
+          <div className="details">
             <p>Umar Farooq</p>
             <span>2 friends</span>
           </div>
@@ -35,13 +35,14 @@ const Profile = () => {
         <div className="impression">Impressions of your posts</div>
         <span>563476</span>
       </div>
+      <hr />
       <div className="socials">
         <div className="link">
           <div className="profile">
-            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-solid fa-hashtag"></i>
             <div>
-              <p>Linkdin</p>
-              <span>Network Platform</span>
+              <p>Twitter</p>
+              <span>Socail Network</span>
             </div>
           </div>
           <i class="fa-solid fa-pen-to-square"></i>
