@@ -1,5 +1,6 @@
 import React from "react";
 import profile_image from "../assets/avatar.png";
+import "./styles/actionCard.scss";
 
 const Action = () => {
   return (
@@ -8,24 +9,24 @@ const Action = () => {
         <img src={profile_image} alt="" />
         <input type="text" />
       </div>
-      <div className="actions">
-        <div>
+      <ul className="actions">
+        <li>
           <i class="fa-solid fa-image"></i>
           image
-        </div>
-        <div>
+        </li>
+        <li>
           <i class="fa-solid fa-video"></i>
           clip
-        </div>
-        <div>
+        </li>
+        <li>
           <i class="fa-solid fa-paperclip"></i>
           Attachment
-        </div>
-        <div>
+        </li>
+        <li>
           <i class="fa-solid fa-microphone"></i>
           audio
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   );
 };
