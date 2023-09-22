@@ -5,12 +5,14 @@ import img_2 from "../assets/post_2.jpg";
 import img_3 from "../assets/post_3.jpg";
 import img_4 from "../assets/post_4.jpg";
 import img_5 from "../assets/post_5.jpg";
+import "./styles/feed.scss";
+import Action from "./Action";
 
 const Feed = () => {
   const src = [img_1, img_2, img_3, img_4, img_5];
   return (
-    <div>
-      <h1>Posts</h1>
+    <div className="feed">
+      <Action />
       <PostCard media_src={src[0]} />
     </div>
   );

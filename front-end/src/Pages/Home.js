@@ -2,13 +2,13 @@ import React from "react";
 import Profile from "../Components/Profile";
 import "./styles/style.scss";
 import Add from "../Components/Add";
-import Me from "../Components/Me";
+import Feed from "../Components/Feed";
 
 const Home = () => {
   return (
     <div className="home-page">
       <Profile />
-      <Me />
+      <Feed />
       <Add />
     </div>
   );
