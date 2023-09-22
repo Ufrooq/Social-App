@@ -2,7 +2,7 @@
   width: 500px;
   height: auto;
   background-color: #212121;
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -40,6 +40,28 @@
       object-fit: contain;
       width: 100%;
       border-radius: 15px;
+    }
+  }
+  .interactions {
+    padding: 0px 4px;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffffee;
+
+    .like_comment {
+      display: flex;
+      column-gap: 20px;
+
+      .impress {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+      }
+    }
+
+    i {
+      color: #ffffffab;
+      font-size: 1.3rem;
     }
   }
 }

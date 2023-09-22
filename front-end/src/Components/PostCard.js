@@ -18,6 +18,19 @@ const PostCard = ({ media_src }) => {
       <div className="post_media">
         <img src={media_src} alt="" />
       </div>
+      <div className="interactions">
+        <div className="like_comment">
+          <div className="impress">
+            <i class="fa-regular fa-heart"></i>
+            <span>3</span>
+          </div>
+          <div className="impress">
+            <i class="fa-regular fa-comment"></i>
+            <span>5</span>
+          </div>
+        </div>
+        <i class="fa-solid fa-share-nodes"></i>
+      </div>
     </div>
   );
 };
