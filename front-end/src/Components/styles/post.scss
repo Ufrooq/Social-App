@@ -14,8 +14,8 @@
     .profile {
       display: flex;
       img {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
       }
       .details {
         margin-left: 5px;
@@ -24,13 +24,24 @@
         justify-content: center;
         p {
           font-weight: bold;
+          font-size: 1.1rem;
+          color: #fff;
         }
         span {
-          font-size: 0.8rem;
+          font-size: 0.7rem;
           color: #ffffffab;
         }
       }
     }
+
+    i {
+      width: 50px;
+      //   height: 50px;
+    }
+  }
+  .captions {
+    color: white;
+    font-size: 0.9rem;
   }
   .post_media {
     border-radius: 15px;

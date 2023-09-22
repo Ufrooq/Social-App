@@ -9,12 +9,13 @@ const PostCard = ({ media_src }) => {
         <div className="profile">
           <img src={profile_image} alt="" srcset="" />
           <div className="details">
-            <p>Same</p>
+            <p>Same Steven</p>
             <span>San Francs, USA</span>
           </div>
         </div>
+        <i class="fa-solid fa-user-plus"></i>
       </div>
-      <div className="captions">sunest on its peak</div>
+      <p className="captions">sunest on its peak</p>
       <div className="post_media">
         <img src={media_src} alt="" />
       </div>
