@@ -1,21 +1,62 @@
 .action-card {
   background-color: #212121;
-  padding: 20px;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  border-radius: 10px;
   .my-mind {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    column-gap: 20px;
 
     img {
       width: 50px;
       height: 50px;
     }
+
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      background-color: #ffffff1b;
+      color: white;
+      &::placeholder {
+        color: #ffffff8c;
+      }
+    }
+  }
+
+  .line {
+    height: 0.8px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.373);
   }
   .actions {
     display: flex;
-    column-gap: 20px;
+    column-gap: 30px;
+    align-items: center;
     li {
       list-style-type: none;
+      color: #b6b4b1;
+      font-size: 0.8rem;
+      cursor: pointer;
+      i {
+        margin: 0px 5px;
+        color: #b6b4b1;
+        font-size: 1rem;
+      }
+      button {
+        padding: 5px 15px;
+        border-radius: 20px;
+        border: none;
+        background-color: #f98c0a;
+        color: white;
+        cursor: pointer;
+      }
     }
   }
 }
