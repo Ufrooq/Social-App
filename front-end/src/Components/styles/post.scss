@@ -6,7 +6,7 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
+  row-gap: 20px;
   .post-info {
     display: flex;
     align-items: center;
@@ -24,6 +24,7 @@
         justify-content: center;
         p {
           font-weight: bold;
+
           font-size: 1.1rem;
           color: #fff;
         }
@@ -35,8 +36,11 @@
     }
 
     i {
+      cursor: pointer;
       width: 50px;
       //   height: 50px;
+      font-size: 20px;
+      color: white;
     }
   }
   .captions {
@@ -71,6 +75,7 @@
     }
 
     i {
+      cursor: pointer;
       color: #ffffffab;
       font-size: 1.3rem;
     }

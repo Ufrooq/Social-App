@@ -9,7 +9,9 @@ const Home = () => {
     <div className="home-page">
       <Profile />
       <Feed />
-      <Add />
+      <div className="right-portion">
+        <Add />
+      </div>
     </div>
   );
 };

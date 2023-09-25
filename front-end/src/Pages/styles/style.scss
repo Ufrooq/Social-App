@@ -4,4 +4,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  .right-portion {
+    display: flex;
+    flex-direction: column;
+  }
 }
