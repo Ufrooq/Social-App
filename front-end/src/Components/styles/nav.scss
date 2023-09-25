@@ -4,8 +4,11 @@
   align-items: center;
 }
 nav {
-  background-color: #212121;
+  background-color: #1e293b;
   width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 4;
   @include custom_flex();
   padding: 20px 30px;
   .left-part {

@@ -14,6 +14,9 @@ const Feed = () => {
     <div className="feed">
       <Action />
       <PostCard media_src={src[0]} />
+      <PostCard media_src={src[0]} />
+      <PostCard media_src={src[0]} />
+      <PostCard media_src={src[0]} />
     </div>
   );
 };
