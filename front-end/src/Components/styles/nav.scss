@@ -10,7 +10,7 @@ nav {
   top: 0px;
   z-index: 4;
   @include custom_flex();
-  padding: 20px 30px;
+  padding: 15px 30px;
   .left-part {
     @include custom_flex();
     column-gap: 20px;
@@ -22,8 +22,8 @@ nav {
       @include custom_flex();
       column-gap: 10px;
       border: 1px solid grey;
-      padding: 8px 15px;
-      border-radius: 3px;
+      padding: 8px 20px;
+      border-radius: 50px;
       input {
         background-color: transparent;
         border: none;

@@ -23,7 +23,17 @@
     }
   }
   i {
-    font-size: 1.3rem;
+    font-size: 1rem;
     cursor: pointer;
+    background-color: #0ea4e935;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #cbd5e1;
   }
 }

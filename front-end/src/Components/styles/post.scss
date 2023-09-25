@@ -36,11 +36,18 @@
     }
 
     i {
+      font-size: 1rem;
       cursor: pointer;
-      width: 50px;
-      //   height: 50px;
-      font-size: 20px;
-      color: white;
+      background-color: #0ea4e935;
+      width: 40px;
+      height: 40px;
+      padding: 20px;
+      text-align: center;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #cbd5e1;
     }
   }
   .captions {

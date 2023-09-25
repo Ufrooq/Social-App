@@ -12,7 +12,7 @@ const Friend = () => {
           <span>2 friends</span>
         </div>
       </div>
-      <i class="fa-solid fa-user-plus"></i>
+      <i class="fa-solid fa-user-minus"></i>
     </div>
   );
 };
