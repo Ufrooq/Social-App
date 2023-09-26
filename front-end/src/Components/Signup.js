@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/signup.scss";
 import illustration_image from "../assets/undraw_welcoming_re_x0qo.svg";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
   return (
@@ -21,6 +22,18 @@ const Signup = () => {
             signup<i class="fa-solid fa-right-to-bracket"></i>
           </span>
         </form>
+        <p className="already_">
+          Already have an account ?
+          <span>
+            <Link
+              to="/login"
+              style={{ textDecoration: "none", color: "#0ea5e9" }}
+            >
+              {" "}
+              Login
+            </Link>
+          </span>
+        </p>
       </div>
       <div className="illustration">
         <img src={illustration_image} alt="" srcset="" />
