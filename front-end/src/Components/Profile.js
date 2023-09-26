@@ -42,7 +42,7 @@ const Profile = () => {
         <span id="sos">Social Profiles</span>
         <div className="link">
           <div className="profile">
-            <i class="fa-solid fa-hashtag"></i>
+            <i class="fa-brands fa-twitter"></i>
             <div className="details">
               <p>Twitter</p>
               <span>Socail Network</span>

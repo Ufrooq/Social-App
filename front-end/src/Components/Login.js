@@ -6,8 +6,12 @@ const Login = () => {
     <div className="login_page">
       <div className="login_form">
         <form>
+          <h2>Login Page</h2>
           <input type="email" required />
           <input type="password" required />
+          <span>
+            Login<i class="fa-solid fa-right-to-bracket"></i>
+          </span>
         </form>
       </div>
       <div className="illustration">

@@ -1,17 +1,56 @@
 .login_page {
   display: flex;
   justify-content: center;
+  width: 80%;
+  height: 100vh;
   .login_form {
     flex: 1 0 50%;
+    align-self: center;
     form {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      row-gap: 20px;
+      input {
+        background-color: transparent;
+        border: 1.5px solid #1e293b;
+        outline: none;
+        padding: 10px 25px;
+        font-size: 1.1rem;
+        border-radius: 30px;
+        color: #cbd5e1;
+      }
+
+      span {
+        padding: 8px 25px;
+        font-size: 1.1rem;
+        background-color: #0ea5e9;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        border: 1px solid #090e19;
+        transition: 0.3s all;
+        i {
+          margin: 1px 5px 0px 5px;
+          transform: translateX(0px);
+          transition: all 0.5s;
+        }
+        &:hover {
+          background-color: transparent;
+          color: #0ea5e9;
+          border: 1px solid #0ea5e9;
+          i {
+            transform: translateX(5px);
+          }
+        }
+      }
     }
   }
 
   .illustration {
+    align-self: center;
     flex: 1 0 50%;
     img {
       width: 95%;
