@@ -17,6 +17,11 @@
       h1 {
         margin-left: 3px;
       }
+
+      .name_ {
+        display: flex;
+        column-gap: 10px;
+      }
       input {
         background-color: transparent;
         border: 1.5px solid #1e293b;
@@ -29,6 +34,12 @@
         &::placeholder {
           color: #cbd5e16c;
           transition: 0.3s all;
+        }
+
+        &::-webkit-file-upload-button {
+          background-color: transparent;
+          color: white;
+          border: none;
         }
         &:focus {
           &::placeholder {
