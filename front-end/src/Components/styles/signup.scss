@@ -1,9 +1,10 @@
-.login_page {
+.signup_page {
   display: flex;
   justify-content: center;
   width: 70%;
   height: 100vh;
-  .login_form {
+  column-gap: 5rem;
+  .signup_form {
     flex: 1 0 40%;
     align-self: center;
     form {
@@ -39,7 +40,7 @@
 
       span {
         margin-left: 1px;
-        padding: 8px 25px;
+        padding: 8px 10px;
         font-size: 1.1rem;
         background-color: #0ea5e9;
         border-radius: 30px;
@@ -70,7 +71,7 @@
 
   .illustration {
     align-self: center;
-    flex: 1 0 50%;
+    flex: 1 0 30%;
     img {
       width: 95%;
     }

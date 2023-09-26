@@ -6,9 +6,9 @@ const Login = () => {
     <div className="login_page">
       <div className="login_form">
         <form>
-          <h2>Login Page</h2>
-          <input type="email" required />
-          <input type="password" required />
+          <h1>Login Page</h1>
+          <input type="email" placeholder="enter email" required />
+          <input type="password" placeholder="enter password" required />
           <span>
             Login<i class="fa-solid fa-right-to-bracket"></i>
           </span>
