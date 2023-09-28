@@ -8,7 +8,6 @@ import {
 import { validatetoken } from "../Middleware/validateToken.js";
 
 const router = express.Router();
-
 router.get("/", validatetoken, getFeedPosts);
 router.get("/", getUserPosts);
 router.get("/", likePost);

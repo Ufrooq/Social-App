@@ -12,47 +12,66 @@ const Action = () => {
     setAction(actionValue);
   }
   function handleChange(e) {
-    console.log(e.target.name);
+    setData({ ...data, [e.target.name]: e.target.value });
   }
 
   async function handlePost() {
-    // try {
-    //   const response = await fetch("http://localhost:3001/posts", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: {
-    //       // postData:
-    //     },
-    //   });
-    // } catch (error) {}
+    const { caption, media } = data;
+    console.log(data);
+    console.log(caption, media);
+    if (caption != "" && media != "") {
+      try {
+        const response = await fetch("http://localhost:3001/posts", {
+          withCredentials: true,
+          crossorigin: true,
+          mode: "no-cors",
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: {
+            caption,
+            media,
+          },
+        });
+        console.log(response);
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      console.log("fill required fields sdsadasd !!");
+    }
   }
 
   return (
     <div className="action-card">
       <div className="my-mind">
         <img src={profile_image} alt="" />
-        <input type="text" placeholder="what's on your mind ?" />
+        <input
+          type="text"
+          name="caption"
+          placeholder="what's on your mind ?"
+          onChange={handleChange}
+        />
       </div>
       {action != "" && action == "image" ? (
         <div className="act">
-          <input type="file" name="image" onChange={handleChange} />
+          <input type="file" name="media" onChange={handleChange} />
           <span>upload image</span>
         </div>
       ) : action == "video" ? (
         <div className="act">
-          <input type="file" name="video" onChange={handleChange} />
+          <input type="file" name="media" onChange={handleChange} />
           <span>upload video</span>
         </div>
       ) : action == "pdf" ? (
         <div className="act">
-          <input type="file" name="pdf" onChange={handleChange} />
+          <input type="file" name="media" onChange={handleChange} />
           <span>attach docs</span>
         </div>
       ) : action == "micro" ? (
         <div className="act">
-          <input type="file" name="audio" onChange={handleChange} />
+          <input type="file" name="media" onChange={handleChange} />
           <span>upload audio</span>
         </div>
       ) : null}
