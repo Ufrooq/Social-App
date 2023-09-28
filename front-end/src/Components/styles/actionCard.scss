@@ -30,20 +30,23 @@
   }
 
   .act {
-    border: 2px dotted #0ea5e9;
-    padding: 15px;
-    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
     input {
+      border: 2px dotted #0ea5e9;
+      padding: 15px;
+      border-radius: 2px;
       color: white;
+      font-size: 1.001rem;
+      cursor: pointer;
       &::-webkit-file-upload-button {
-        background-color: #0ea5e9;
-        border: none;
-        padding: 5px 10px;
-        color: white;
-        font-size: 1.001rem;
-        margin: 0px 20px 0px 0px;
-        border-radius: 2px;
+        display: none;
       }
+    }
+
+    span {
+      margin: 10px 0px 0px 5px;
+      color: #0ea5e9;
     }
   }
   .line {
@@ -73,6 +76,11 @@
         background-color: #0ea5e9;
         color: white;
         cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: #0b82b9;
+        }
       }
     }
   }
