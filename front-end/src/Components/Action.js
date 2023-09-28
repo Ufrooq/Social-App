@@ -4,13 +4,29 @@ import "./styles/actionCard.scss";
 
 const Action = () => {
   const [action, setAction] = useState("");
-
+  const [data, setData] = useState({
+    caption: "",
+    media: "",
+  });
   function handleAction(actionValue) {
     setAction(actionValue);
   }
+  function handleChange(e) {
+    console.log(e.target.name);
+  }
 
-  function handlePost() {
-    alert("sajasdjasd dasd ");
+  async function handlePost() {
+    // try {
+    //   const response = await fetch("http://localhost:3001/posts", {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: {
+    //       // postData:
+    //     },
+    //   });
+    // } catch (error) {}
   }
 
   return (
@@ -21,22 +37,22 @@ const Action = () => {
       </div>
       {action != "" && action == "image" ? (
         <div className="act">
-          <input type="file" />
+          <input type="file" name="image" onChange={handleChange} />
           <span>upload image</span>
         </div>
       ) : action == "video" ? (
         <div className="act">
-          <input type="file" />
+          <input type="file" name="video" onChange={handleChange} />
           <span>upload video</span>
         </div>
-      ) : action == "clip" ? (
+      ) : action == "pdf" ? (
         <div className="act">
-          <input type="file" />
+          <input type="file" name="pdf" onChange={handleChange} />
           <span>attach docs</span>
         </div>
       ) : action == "micro" ? (
         <div className="act">
-          <input type="file" />
+          <input type="file" name="audio" onChange={handleChange} />
           <span>upload audio</span>
         </div>
       ) : null}
@@ -50,7 +66,7 @@ const Action = () => {
           <i class="fa-solid fa-video"></i>
           clip
         </li>
-        <li onClick={() => handleAction("clip")}>
+        <li onClick={() => handleAction("pdf")}>
           <i class="fa-solid fa-paperclip"></i>
           Attachment
         </li>
