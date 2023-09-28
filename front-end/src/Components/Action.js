@@ -15,7 +15,6 @@ const Action = () => {
         <img src={profile_image} alt="" />
         <input type="text" placeholder="what's on your mind ?" />
       </div>
-      <div className="line" />
       <div className="act">
         <input type="file" placeholder="add ima ere" />
       </div>
