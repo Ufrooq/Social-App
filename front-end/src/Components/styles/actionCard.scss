@@ -29,6 +29,23 @@
     }
   }
 
+  .act {
+    border: 2px dotted #0ea5e9;
+    padding: 10px;
+    border-radius: 2px;
+    input {
+      color: white;
+      &::-webkit-file-upload-button {
+        background-color: #0ea5e9;
+        border: none;
+        padding: 5px 10px;
+        color: white;
+        font-size: 1.1rem;
+        margin: 0px 20px 0px 0px;
+        border-radius: 2px;
+      }
+    }
+  }
   .line {
     height: 0.8px;
     width: 100%;
