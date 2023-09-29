@@ -1,28 +1,28 @@
 import { postsModel } from "../Models/posts.js";
-import { UserModel } from "../Models/user.js";
+// import { UserModel } from "../Models/user.js";
 
 export const createPost = async (req, res) => {
   try {
-    console.log("ooooooooooooooooooooo");
-    console.log(req.body);
-    const { userId, description, picturePath } = req.body;
-    const user = await UserModel.find(userId);
-    const newPost = await postsModel.create({
-      firstName,
-      lastName,
-      location: user.location,
-      description,
-      userPicturePath: user.picturePath,
-      picturePath,
-      likes: {},
-      comments: [],
-    });
-    const updatedPosts = await postsModel.find();
-    res.status(201).json(updatedPosts);
+    const { description, picturePath } = req.body;
+    console.log(description, picturePath);
+    // const user = await UserModel.find(userId);
+    // const newPost = await postsModel.create({
+    //   firstName,
+    //   lastName,
+    //   location: user.location,
+    //   description,
+    //   userPicturePath: user.picturePath,
+    //   picturePath,
+    //   likes: {},
+    //   comments: [],
+    // });
+    // const updatedPosts = await postsModel.find();
+    res.status(201).json("updatedPosts");
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
 };
+
 export const getFeedPosts = async (req, res) => {
   try {
     const feedPosts = await postsModel.find();
@@ -31,6 +31,7 @@ export const getFeedPosts = async (req, res) => {
     res.status(404).json({ message: error.message });
   }
 };
+
 export const getUserPosts = async (req, res) => {
   try {
     const { userId } = req.params;
@@ -40,6 +41,7 @@ export const getUserPosts = async (req, res) => {
     res.status(404).json({ message: error.message });
   }
 };
+
 export const likePost = async (req, res) => {
   try {
     const { postId } = req.params; //that's the id of post to be liked or like removed

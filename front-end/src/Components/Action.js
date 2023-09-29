@@ -30,8 +30,8 @@ const Action = () => {
             "Content-Type": "application/json",
           },
           body: {
-            caption,
-            media,
+            description: caption,
+            picturePath: media,
           },
         });
         console.log(response);
