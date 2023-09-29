@@ -6,6 +6,7 @@ import {
   likePost,
 } from "../Controllers/posts.js";
 import { validatetoken } from "../Middleware/validateToken.js";
+import { upload } from "../Middleware/uploadFile.js";
 
 const router = express.Router();
 router.get("/", validatetoken, getFeedPosts);

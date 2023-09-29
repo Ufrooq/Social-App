@@ -19,42 +19,34 @@ import cookieParser from "cookie-parser";
 import { validatetoken } from "./Middleware/validateToken.js";
 
 // CONFIGURATIONS --->
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 dotenv.config();
 const app = express();
 const corsOptions = {
-  origin: "http://localhost:3000/",
+  origin: "http://localhost:3000",
   credentials: true,
 };
 app.use(cors(corsOptions));
-
-app.use(cookieParser());
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+// app.use(cookieParser());
 app.use(helmet());
-app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
-app.use(morgan("common"));
-app.use(bodyParser.json({ limit: "30mb", extended: true }));
-app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
-app.use("/assets", express.static(path.join(__dirname, "public/assets")));
+// app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+// app.use(morgan("common"));
+// app.use(bodyParser.urlencoded());
+// app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 // MongoDB Connection --->
 Connection();
 
-// FILE STORAGE SYSTEM --->
-const storage = multer.diskStorage({
-  destination: (req, res, cb) => {
-    cb(null, "public/assets");
-  },
-  filename: (req, file, cb) => {
-    cb(null, file.originalname);
-  },
-});
-const upload = multer({ storage });
+// // FILE STORAGE SYSTEM --->
 
-/* ROUTES FOR FILES */
-app.post("/auth/register", upload.single("picture"), registerUser);
+// /* ROUTES FOR FILES */
+// app.post("/auth/register", upload.single("picture"), registerUser);
 
 /* ROUTES FOR AUTHORIZATION */
 app.use("/auth", authRoutes);

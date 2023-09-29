@@ -3,8 +3,9 @@ import { postsModel } from "../Models/posts.js";
 
 export const createPost = async (req, res) => {
   try {
-    const { description, picturePath } = req.body;
-    console.log(description, picturePath);
+    // const { description, picturePath } = req.body;
+    // console.log(description, picturePath);
+    console.log(req.body);
     // const user = await UserModel.find(userId);
     // const newPost = await postsModel.create({
     //   firstName,

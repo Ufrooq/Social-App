@@ -7,7 +7,7 @@ const Profile = () => {
     <div className="card">
       <div className="header">
         <div className="profile">
-          <img src={profile_image} alt="" srcset="" />
+          <img src={profile_image} alt="" />
           <div className="details">
             <p>Umar Farooq</p>
             <span>2 friends</span>

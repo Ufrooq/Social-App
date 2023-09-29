@@ -12,27 +12,26 @@ const Action = () => {
     setAction(actionValue);
   }
   function handleChange(e) {
-    setData({ ...data, [e.target.name]: e.target.value });
+    setData({ ...data, media: e.target.files });
   }
 
-  async function handlePost() {
+  async function handlePost(e) {
+    e.preventDefault();
     const { caption, media } = data;
-    console.log(data);
-    console.log(caption, media);
-    if (caption != "" && media != "") {
+    if (caption) {
       try {
+        console.log(data);
         const response = await fetch("http://localhost:3001/posts", {
+          credentials: "include",
           withCredentials: true,
-          crossorigin: true,
-          mode: "no-cors",
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: {
+          body: JSON.stringify({
             description: caption,
             picturePath: media,
-          },
+          }),
         });
         console.log(response);
       } catch (error) {
@@ -44,14 +43,14 @@ const Action = () => {
   }
 
   return (
-    <div className="action-card">
+    <form className="action-card" encType="multipart/form-data" action="/posts">
       <div className="my-mind">
         <img src={profile_image} alt="" />
         <input
           type="text"
           name="caption"
           placeholder="what's on your mind ?"
-          onChange={handleChange}
+          onChange={(e) => setData({ ...data, caption: e.target.value })}
         />
       </div>
       {action != "" && action == "image" ? (
@@ -97,7 +96,7 @@ const Action = () => {
           <button onClick={handlePost}>POST</button>
         </li>
       </ul>
-    </div>
+    </form>
   );
 };
 
